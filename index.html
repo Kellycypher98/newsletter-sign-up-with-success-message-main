@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+<body class="md:h-screen flex md:justify-center" style="font-family: 'Roboto', sans-serif;">
+  
+  <div class="container w-fit flex md:flex-row flex-col-reverse mx-auto  md:my-auto  md:rounded-xl  md:p-2 md:shadow-lg" id="newsletterBox">
+    <div class="flex flex-col md:justify-center gap-6 md:py-5 py-10 px-7  md:px-10 md:w-1/2 ">
+      <h1 class="md:text-6xl text-5xl" style="font-weight: 700;" >Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on: </p>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-row gap-3">
+          <img src="assets/images/icon-list.svg" alt="" srcset="">
+          <p>Product discovery and bulding what matters</p>
+        </div>
+        <div class="flex flex-row gap-3">
+          <img src="assets/images/icon-list.svg" alt="" srcset="">
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div class="flex flex-row gap-3">
+          <img src="assets/images/icon-list.svg" alt="" srcset="">
+          <p>And much more!</p>
+        </div>
+      </div>
+
+      <form id="newsletterForm" class="flex flex-col " action="#" method="POST">
+
+        <label class="pb-1  flex flex-row space-x-40 " for="email">
+          <p class="font-bold text-sm">Email Address</p>
+           <p id="emailError" class="text-red-500 text-sm hidden">valid email required</p>
+        </label>
+       
+        <input id="emailInput" class="border border-black py-3 mb-6 rounded-lg px-4" type="email">
+
+        <button id="submitBtn" class="bg-black text-white py-4 rounded-lg hover:bg-orange-700" type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+     
+    <div class="md:p-5">
+      <img class="hidden md:block" src="/assets/images/illustration-sign-up-desktop.svg" alt="" srcset="">
+      <img class="md:hidden w-full" src="/assets/images/illustration-sign-up-mobile.svg" alt="">
+    </div>
+    
+      
+  </div>
+
+  <div class="flex flex-col md:self-center justify-center h-screen md:h-fit px-8 py-10 md:w-4/12 shadow-2xl gap-5 md:space-y-0 space-y-80 rounded-2xl hidden" id="confirmationBox">
+    <div class="space-y-8 ">
+      <div>
+        <img src="/assets/images/icon-success.svg" alt="">
+      </div>
+      <div>
+        <h1 class="text-5xl" style="font-weight: 700;">
+          Thanks for subscribing!
+        </h1>
+      </div>
+      <div>
+        <p class="text-left text-sm">
+          A confirmation email has been sent to <span class="font-bold" id="emailsent"></span>. Please open It and click the button inside to confirm your subscription.
+        </p>
+      </div>
+    </div>
+    
+    
+    <div class="text-center">
+      <button id="dismissBtn" style="background-color: hsl(4, 100%, 67%);" class="w-full rounded-lg py-3 text-white">Dismiss message</button>
+    </div>
+  </div>
+
+
+ <script src="main.js"></script>
+</body>
+</html>
